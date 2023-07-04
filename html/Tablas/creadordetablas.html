@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Tablas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+    <button type="button" onclick="window.location.href='../../index.html'"
+        style="width: 100%;height: 50px">INICIO</button>
+    <br>
+    <h1>Regiostro de informacion</h1>
+
+    <!-- el form -->
+    <form action="../../php/Tablas/creadordetablas.php" method="post">
+        <input type="text" name="nombre" id="" placeholder="NombreDeTabla" required>
+        <br>
+        <div>
+            <input type="text" name="varname1" id="" placeholder="Variable 1 Name" required>
+            <br>
+            <input type="text" name="varname2" id="" placeholder="Variable 2  Name" required>
+            <br>
+            <input type="text" name="varname3" id="" placeholder="Variable 3  Name">
+            <br>
+            <input type="text" name="varname4" id="" placeholder="Variable 4  Name">
+            <br>
+        </div>
+        <div>
+            <input type="text" name="var1" id="" placeholder="Variable1" required>
+            <br>
+            <input type="text" name="var2" id="" placeholder="Variable2" required>
+            <br>
+            <input type="text" name="var3" id="" placeholder="Variable3">
+            <br>
+            <input type="text" name="var4" id="" placeholder="Variable4">
+            <br>
+        </div>
+        <br>
+
+
+        <input type="submit" value="enviar">
+
+    </form>
+</body>
+
+</html>

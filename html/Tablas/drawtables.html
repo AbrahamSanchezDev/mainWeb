@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones</title>
+    <link rel="stylesheet" href="../../css/tablas.css">
+</head>
+
+<body>
+
+    <button type="button" onclick="window.location.href='../../index.html'"
+        style="width: 100%;height: 50px" class="art0">INDEX</button>
+    <br>
+    <button type="button" onclick="window.location.href='creadordetablas.html'" style="width: 100%;height: 50px" class="art0">CREAR
+        TABLA DATA</button>
+    <br>
+    <hr>
+    <form method="POST" action="../../php/Tablas/CreadorDeDatos/creadordedatos.php">
+        <input type="submit" value="Crear Datos para todas las tablas!">
+    </form>
+    <br>
+   
+    <hr>
+
+    <div class="botones">
+
+        <form method="POST" action="../../php/Tablas/Proyecto/usuariostable.php">
+            <input type="submit" value="Tabla de Usuarios" class="tablas">
+        </form>
+
+        <form method="POST" action="../../php/Tablas/Proyecto/estudiantestable.php">
+            <input type="submit" value="Tabla de Estudiantes" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Proyecto/tablacarreras.php">
+            <input type="submit" value="Tabla de Carreras" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Proyecto/tablaedificios.php">
+            <input type="submit" value="Tabla de Edificios" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Proyecto/tablahorarios.php">
+            <input type="submit" value="Tabla de Horarios" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Proyecto/tablasalones.php">
+            <input type="submit" value="Tabla de Salones" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Proyecto/tablausuario.php">
+            <input type="submit" value="Tabla de Usuario" class="tablas">
+        </form>
+
+        <form method="POST" action="../../php/Tablas/Tienda/creditos.php">
+            <input type="submit" value="creditos" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Tienda/empleados.php">
+            <input type="submit" value="empleados" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Tienda/inventarios.php">
+            <input type="submit" value="inventarios" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Tienda/tienda.php">
+            <input type="submit" value="tienda" class="tablas">
+        </form>
+        <form method="POST" action="../../php/Tablas/Tienda/venta.php">
+            <input type="submit" value="venta" class="tablas">
+        </form>
+    </div>
+</body>
+
+</html>
