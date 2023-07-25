@@ -9,6 +9,7 @@
 <body>
     <button type="button" onclick="window.location.href='../index.html'"
     style="width: 100%;height: 50px">INICIO</button>
+    <center>
     <br>
     <h1>Registro de informacion</h1>
 
@@ -29,17 +30,21 @@
     
     -->
     <form action="../php/formulario.php" method="post">
-        <input type="text" name="nombre" id="" placeholder="nombre" required>
+        <input type="text" name="nombre" id="" placeholder="Nombre" required>
+        <br> <br>
+        <input type="text" name="apellido" id="" placeholder="Apellido">
+        <br><br>
+        <input type="tel" name="telefono" id="" placeholder="Telefono" required>
+        <br><br>
+        <input type="text" name="colonia" id="" placeholder="Colonia" required>
+        <br><br>
+        <input type="text" name="direccion" id="" placeholder="Direccion">
+        <br><br>
+        <input type="email" name="correo" id="" placeholder="Correo">
+        <br><br>
+
+        <label for=""> Tipo de servicio</label>
         <br>
-        <input type="text" name="apellido" id="" placeholder="apellido">
-        <br>
-        <input type="tel" name="telefono" id="" placeholder="telefono" required>
-        <br>
-        <input type="text" name="colonia" id="" placeholder="colonia" required>
-        <br>
-        <input type="text" name="direccion" id="" placeholder="direccion">
-        <br>
-       
         <select name="Tipo_Servicio" id="Tipo_Servicio">
             <option value="Servicio1">Servicio1</option>
             <option value="Servicio2">Servicio2</option>            
@@ -47,18 +52,21 @@
             <option value="ServicioN">ServicioN</option>
         </select>
 
-        <br>
-        <input type="email" name="correo" id="" placeholder="correo">
+        <br><br>
+    
+        <label for=""> Fecha de cita</label>
         <br>
         <input type="date" name="fecha_de_cita" id="" placeholder="fecha_de_cita">
-
+        <br><br>
+        <label for=""> Fecha de registro</label>
         <br>
         <input type="date" name="fecha_de_hoy" id="" placeholder="fecha_de_hoy" required>
-        <br>
+        <br><br>
         <input type="text" name="quien_lo_atendio" id="" placeholder="Quien Lo Atendio" required>
-        <br>
+        <br><br>
         
         <input type="submit" value="enviar">
+    </center>
 
     </form>
 </body>
