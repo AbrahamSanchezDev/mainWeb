@@ -53,7 +53,7 @@ if ($conn->connect_error) {
     
     #echo ($user . ' ' .  $name . ' ' . $email  . ' ' . $pass);
 
-    $sql = "INSERT INTO usuarios(Nombre,Apellido,Telefono,Colonia,Direccion,Servicio,Correo,Fecha_de_cita,Fecha_de_hoy,Quien_lo_atendio) VALUES ('$nombre','$apellido','$telefono','$colonia','$direccion','$Tipo_Servicio','$correo','$fecha_de_cita','$fecha_de_hoy','$quien_lo_atendio');";
+    $sql = "INSERT INTO formulario(Nombre,Apellido,Telefono,Colonia,Direccion,Servicio,Correo,Fecha_de_cita,Fecha_de_hoy,Quien_lo_atendio) VALUES ('$nombre','$apellido','$telefono','$colonia','$direccion','$Tipo_Servicio','$correo','$fecha_de_cita','$fecha_de_hoy','$quien_lo_atendio');";
 
 
 
@@ -64,7 +64,7 @@ if ($conn->connect_error) {
         loggerRegister($conn, $sql);
         echo "<br>";
         echo ("Posted!");
-        header("Location:../html/index.html");
+        header("Location:../index.html");
 
     } else {
         echo "FAIL!";

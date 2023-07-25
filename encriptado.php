@@ -47,9 +47,9 @@ $deincriptado = desencriptarTexto($encriptado,$key,$iv);
 // echo "AAA : " . strlen($iv) . " \n ";
 // echo $iv . "\n";
 
-echo $encriptado;
-echo "   la desincriptada es:   ";
-echo $deincriptado;
+// echo $encriptado;
+// echo "   la desincriptada es:   ";
+// echo $deincriptado;
 
 
 ?>

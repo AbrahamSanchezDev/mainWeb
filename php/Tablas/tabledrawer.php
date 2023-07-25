@@ -351,7 +351,7 @@ function mostrarTablaDe11($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $va
 function mostrarTablaDe11Desincriptar($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8, $var9,$var10,$var11)
 {
     include '../../../config.php';
-
+    include '../../../encriptado.php';
     if ($conn->connect_error) {
         echo "Error en la conexion";
     } else {
@@ -377,16 +377,16 @@ function mostrarTablaDe11Desincriptar($nombreDeTabla, $var1, $var2, $var3, $var4
             while ($row = $resultado->fetch_assoc()) {
                 echo "<tr>";
                 echo ("<td>" . $row["$var1"] . "</td>");
-                echo ("<td>" . $row["$var2"] . "</td>");
-                echo ("<td>" . $row["$var3"] . "</td>");
-                echo ("<td>" . $row["$var4"] . "</td>");
-                echo ("<td>" . $row["$var5"] . "</td>");
-                echo ("<td>" . $row["$var6"] . "</td>");
-                echo ("<td>" . $row["$var7"] . "</td>");
-                echo ("<td>" . $row["$var8"] . "</td>");
-                echo ("<td>" . $row["$var9"] . "</td>");
-                echo ("<td>" . $row["$var10"] . "</td>");
-                echo ("<td>" . $row["$var11"] . "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var2"],$key,$iv) . "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var3"],$key,$iv) . "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var4"] ,$key,$iv). "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var5"],$key,$iv) . "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var6"],$key,$iv) . "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var7"] ,$key,$iv). "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var8"],$key,$iv) . "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var9"] ,$key,$iv). "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var10"],$key,$iv) . "</td>");
+                echo ("<td>" . desencriptarTexto($row["$var11"],$key,$iv) . "</td>");
                 echo "</tr>";
             }
             echo "</table>";

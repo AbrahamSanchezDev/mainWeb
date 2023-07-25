@@ -1,4 +1,4 @@
 <?php
 include_once '../tabledrawer.php';
-mostrarTablaDe5('estudiantes','ID_estudiantes','nombre','apellido_P','apellido_M','matricula');
+mostrarTablaDe11Desincriptar('formulario','ID_formulario','Nombre','Apellido','Telefono','Colonia','Direccion','Servicio','Correo','Fecha_de_cita','Fecha_de_hoy','Quien_lo_atendio');
 ?>
