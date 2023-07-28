@@ -2,7 +2,7 @@
 
 function mostrarTablaDe2($nombreDeTabla, $var1, $var2)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -32,7 +32,7 @@ function mostrarTablaDe2($nombreDeTabla, $var1, $var2)
 }
 function mostrarTablaDe3($nombreDeTabla, $var1, $var2, $var3)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -64,7 +64,7 @@ function mostrarTablaDe3($nombreDeTabla, $var1, $var2, $var3)
 }
 function mostrarTablaDe4($nombreDeTabla, $var1, $var2, $var3, $var4)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -99,7 +99,7 @@ function mostrarTablaDe4($nombreDeTabla, $var1, $var2, $var3, $var4)
 
 function mostrarTablaDe5($nombreDeTabla, $var1, $var2, $var3, $var4, $var5)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -135,7 +135,7 @@ function mostrarTablaDe5($nombreDeTabla, $var1, $var2, $var3, $var4, $var5)
 }
 function mostrarTablaDe6($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -173,7 +173,7 @@ function mostrarTablaDe6($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var
 }
 function mostrarTablaDe7($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -213,7 +213,7 @@ function mostrarTablaDe7($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var
 }
 function mostrarTablaDe8($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -256,7 +256,7 @@ function mostrarTablaDe8($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var
 
 function mostrarTablaDe9($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8, $var9)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -301,7 +301,7 @@ function mostrarTablaDe9($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var
 
 function mostrarTablaDe11($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8, $var9,$var10,$var11)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
 
     if ($connLectura->connect_error) {
         echo "Error en la conexion";
@@ -350,7 +350,7 @@ function mostrarTablaDe11($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $va
 
 function mostrarTablaDe11Desincriptar($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8, $var9,$var10,$var11)
 {
-    include '../../../config.php';
+    include '../../../configLectura.php';
     include '../../../encriptado.php';
     if ($connLectura->connect_error) {
         echo "Error en la conexion";

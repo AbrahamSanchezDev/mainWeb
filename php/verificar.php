@@ -1,5 +1,6 @@
 <?php
 include_once '../config.php';
+include_once '../configLectura.php';
 include_once 'logger.php';
 include_once 'limpiezaregex.php';
 
