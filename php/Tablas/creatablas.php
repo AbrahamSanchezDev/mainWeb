@@ -3,30 +3,22 @@
 if (php_sapi_name() !== 'apache2handler') {
     die("no se puede abrir desde la consola");
 }
-function CrearTablaDataDe2($tableName, $varname1, $varname2, $var1, $var2)
+function CrearTablaDataDe2($conn, $tableName, $varname1, $varname2, $var1, $var2)
 {
 
-    include '../config.php';
-    if ($conn->connect_error) {
-        echo "Error en la conexion";
-    } else {
+    for ($i = 0; $i < 10; $i++) {
+        $variable1 = $var1 . uniqid() . mt_rand();
+        $variable2 = $var2 . $i;
 
-        for ($i = 0; $i < 10; $i++) {
-            $variable1 = $var1 . uniqid() . mt_rand();
-            $variable2 = $var2 . $i;
-
-            $sql2 = "INSERT INTO $tableName($varname1,$varname2) VALUES ('$variable1','$variable2');";
+        $sql2 = "INSERT INTO $tableName($varname1,$varname2) VALUES ('$variable1','$variable2');";
 
 
-            if ($conn->query($sql2) === FALSE) {
-                echo "FAILED " . $i;
-            }
+        if ($conn->query($sql2) === FALSE) {
+            echo "FAILED " . $i;
         }
-
-        echo "CREATED TABLES FOR " . $tableName;
-
     }
-    $conn->close();
+
+    echo "CREATED TABLES FOR " . $tableName;
 }
 function CrearTablaDataDe3($conn, $tableName, $varname1, $varname2, $varname3, $var1, $var2, $var3)
 {

@@ -8,7 +8,7 @@ if (php_sapi_name() !== 'apache2handler') {
     die("no se puede abrir desde la consola");
 }
 
-if ($conn->connect_error) {
+if ($conn->connect_error || $connLectura->connect_error) {
     echo "Error en la conexion";
 
 } else {
@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 
     $sql = "SELECT * FROM usuarios WHERE correo = '$email' AND pswrd = '$passEncriptada'";
 
-    $resultado = $conn->query($sql);
+    $resultado = $connLectura->query($sql);
 
     loggerRegister($conn, $sql);
     if ($resultado->num_rows > 0) {

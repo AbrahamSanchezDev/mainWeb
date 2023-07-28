@@ -27,16 +27,16 @@ if ($conn->connect_error) {
     $quien_lo_atendio = $_POST['quien_lo_atendio'];
 
     //Limpiar con REGEX
-    $nombre = limpiarRegex($nombre);
-    $apellido = limpiarRegex($apellido);
-    $telefono = limpiarRegex($telefono);
-    $colonia = limpiarRegex($colonia);
-    $direccion = limpiarRegex($direccion);
-    $Tipo_Servicio = limpiarRegex($Tipo_Servicio);
-    $correo = limpiarRegexNormal($correo);
-    $fecha_de_cita = limpiarRegexNormal($fecha_de_cita);
-    $fecha_de_hoy = limpiarRegexNormal($fecha_de_hoy);
-    $quien_lo_atendio = limpiarRegex($quien_lo_atendio);
+    $nombre = limpiarRegexNormal($nombre);
+    $apellido = limpiarRegexNormal($apellido);
+    $telefono = limpiarRegexNormal($telefono);
+    $colonia = limpiarRegexNormal($colonia);
+    $direccion = limpiarRegexNormal($direccion);
+    $Tipo_Servicio = limpiarRegexNormal($Tipo_Servicio);
+    $correo = limpiarRegex($correo);
+    $fecha_de_cita = limpiarRegex($fecha_de_cita);
+    $fecha_de_hoy = limpiarRegex($fecha_de_hoy);
+    $quien_lo_atendio = limpiarRegexNormal($quien_lo_atendio);
 
 
     //Encriptar

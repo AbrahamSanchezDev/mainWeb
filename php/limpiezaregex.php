@@ -9,7 +9,7 @@ function limpiarRegexNormal($inputString){
     return $returnString;
 }
 function limpiarRegex($inputString){
-    $regex = "/[^a-zA-Z0-9\@\.\-\_]/";
+    $regex = "/[^a-zA-Z0-9@.-_]/";
     $returnString = preg_replace($regex,"",$inputString);
     return $returnString;
 }
