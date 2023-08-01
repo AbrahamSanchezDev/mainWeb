@@ -4,12 +4,12 @@ function mostrarTablaDe2($nombreDeTabla, $var1, $var2)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -28,18 +28,18 @@ function mostrarTablaDe2($nombreDeTabla, $var1, $var2)
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 function mostrarTablaDe3($nombreDeTabla, $var1, $var2, $var3)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -60,18 +60,18 @@ function mostrarTablaDe3($nombreDeTabla, $var1, $var2, $var3)
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 function mostrarTablaDe4($nombreDeTabla, $var1, $var2, $var3, $var4)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -94,19 +94,19 @@ function mostrarTablaDe4($nombreDeTabla, $var1, $var2, $var3, $var4)
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 
 function mostrarTablaDe5($nombreDeTabla, $var1, $var2, $var3, $var4, $var5)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -131,18 +131,18 @@ function mostrarTablaDe5($nombreDeTabla, $var1, $var2, $var3, $var4, $var5)
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 function mostrarTablaDe6($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -169,18 +169,18 @@ function mostrarTablaDe6($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var
             echo "NO ROWS";
         }
     }
-    $conn->close();
+    usuarioLector()->close();
 }
 function mostrarTablaDe7($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -209,18 +209,18 @@ function mostrarTablaDe7($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 function mostrarTablaDe8($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -251,19 +251,19 @@ function mostrarTablaDe8($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 
 function mostrarTablaDe9($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8, $var9)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -296,19 +296,19 @@ function mostrarTablaDe9($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 
 function mostrarTablaDe11($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8, $var9,$var10,$var11)
 {
     include '../../../config.php';
 
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -345,19 +345,19 @@ function mostrarTablaDe11($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $va
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 
 function mostrarTablaDe11Desincriptar($nombreDeTabla, $var1, $var2, $var3, $var4, $var5, $var6, $var7, $var8, $var9,$var10,$var11)
 {
     include '../../../config.php';
     include '../../../encriptado.php';
-    if ($connLectura->connect_error) {
+    if (usuarioLector()->connect_error) {
         echo "Error en la conexion";
     } else {
 
         $sql = "SELECT * FROM $nombreDeTabla";
-        $resultado = $connLectura->query($sql);
+        $resultado = usuarioLector()->query($sql);
 
         if ($resultado->num_rows > 0) {
             echo "<table>";
@@ -394,7 +394,7 @@ function mostrarTablaDe11Desincriptar($nombreDeTabla, $var1, $var2, $var3, $var4
             echo "NO ROWS";
         }
     }
-    $connLectura->close();
+    usuarioLector()->close();
 }
 
 ?>

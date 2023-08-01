@@ -8,7 +8,7 @@ if (php_sapi_name() !== 'apache2handler') {
     die("no se puede abrir desde la consola");
 }
 
-if ($conn->connect_error) {
+if (usuarioEscritor()->connect_error) {
     echo "Error en la conexion";
 } else {
 
@@ -35,9 +35,9 @@ if ($conn->connect_error) {
 
     #echo ($sql);
 
-    if ($conn->query($sql) === TRUE) {
+    if (usuarioEscritor()->query($sql) === TRUE) {
 
-        loggerRegister($conn, $sql);
+        loggerRegister(usuarioEscritor(), $sql);
         echo "<br>";
         echo ("Posted!");
         header("Location:../html/iniciosesion.html");
@@ -50,5 +50,5 @@ if ($conn->connect_error) {
 
 
 }
-$conn->close();
+usuarioEscritor()->close();
 ?>

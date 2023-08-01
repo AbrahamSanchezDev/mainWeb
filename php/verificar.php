@@ -8,7 +8,7 @@ if (php_sapi_name() !== 'apache2handler') {
     die("no se puede abrir desde la consola");
 }
 
-if ($conn->connect_error || $connLectura->connect_error) {
+if (usuarioEscritor()->connect_error || usuarioLector()->connect_error) {
     echo "Error en la conexion";
 
 } else {
@@ -23,9 +23,9 @@ if ($conn->connect_error || $connLectura->connect_error) {
 
     $sql = "SELECT * FROM usuarios WHERE correo = '$email' AND pswrd = '$passEncriptada'";
 
-    $resultado = $connLectura->query($sql);
+    $resultado = usuarioLector()->query($sql);
 
-    loggerRegister($conn, $sql);
+    loggerRegister(usuarioEscritor(), $sql);
     if ($resultado->num_rows > 0) {
         header("Location:../html/bienvenido.html");
 
@@ -35,5 +35,5 @@ if ($conn->connect_error || $connLectura->connect_error) {
     }
 
 }
-$conn->close();
+usuarioEscritor()->close();
 ?>

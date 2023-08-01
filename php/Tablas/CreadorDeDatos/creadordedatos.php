@@ -6,23 +6,23 @@ include_once '../creatablas.php';
 if(php_sapi_name() !== 'cli'){
     die("solo se puede abrir desde la consola");
 }
-if ($conn->connect_error) {
+if (usuarioEscritor()->connect_error) {
     echo "Error en la conexion";
 } else {
 
     $sqlcarreras = "INSERT INTO carreras(Nombre) VALUES ('TIS'),('MET'),('PIA');";
-    if ($conn->query($sqlcarreras) === FALSE) {
+    if (usuarioEscritor()->query($sqlcarreras) === FALSE) {
         echo "ERROR EN INSERT DATA A CARRERAS";
     }
     $sqledificios = "INSERT INTOs edificios(Nombre,Posicion_z,Posicion_x,Descripcion) VALUES ('Edificio A','10.1','5.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio B','20.1','25.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio C','30.1','35.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio D','40.1','45.1','Dentro de este edificio puedes encontrar multiples departamentos');";
-    if ($conn->query($sqledificios) === FALSE) {
+    if (usuarioEscritor()->query($sqledificios) === FALSE) {
         echo "ERROR EN INSERT DATA A EDIFICIOS";
     }
     $sqlsalones = "INSERT INTO salones(Nombre,ID_edificio) VALUES ('1',1),('2',1),('3',1),('4',1),('5',1),
     ('101',2),('102',2),('103',2),('104',2),('105',2),
     ('201',3),('202',3),('203',3),('204',3),('205',3),
     ('301',4),('302',4),('303',4),('304',4),('305',4);";
-    if ($conn->query($sqlsalones) === FALSE) {
+    if (usuarioEscritor()->query($sqlsalones) === FALSE) {
         echo "ERROR EN INSERT DATA A Salones";
     }
 
@@ -45,7 +45,7 @@ if ($conn->connect_error) {
         $sql2 = "INSERT INTO usuario(Nombre,Apellido_P,Apellido_M,Matricula,ID_Carrera,Grado,Grupo) VALUES ('$variable1','$variable2','$variable3','$variable4','$variable5','$variable6','$variable7');";
 
 
-        if ($conn->query($sql2) === FALSE) {
+        if (usuarioEscritor()->query($sql2) === FALSE) {
             echo "FAILED " . $i;
         }
     }
@@ -63,19 +63,19 @@ if ($conn->connect_error) {
         $sql2 = "INSERT INTO usuario(Nombre,Apellido_P,Apellido_M,NumeroDeEmpleado) VALUES ('$variable1','$variable2','$variable3','$variable4');";
 
 
-        if ($conn->query($sql2) === FALSE) {
+        if (usuarioEscritor()->query($sql2) === FALSE) {
             echo "FAILED " . $i;
         }
     }
 
 
-    CrearTablaDataDe4($conn, 'tienda', 'NombreDeProducto', 'Precio', 'Existencias', 'Caducidad', 'Papas', 1, '10', 'Junio/');
-    CrearTablaDataDe3($conn, 'venta', 'NombreDeProducto', 'CantidadDeProductos', 'Total', 'JUAN', 10, 2);
-    CrearTablaDataDe5($conn, 'inventario', 'NombreDeProducto', 'ExistenciasIniciales', 'Entradas', 'Salidas', 'Stock', 'PAPAS', 100, 10, 20, 90);
-    CrearTablaDataDe3($conn, 'empleados', 'Nombre', 'Apellido', 'Puesto', 'JUAN', 'PERES', 'Conductor');
-    CrearTablaDataDe5($conn, 'creditos', 'Nombre', 'Apellido', 'FechaDeCompra', 'FechaDePago', 'TotalDeCompra', 'MARCO', 'Rodriguez', 'Mayo/', 'Julio/', 32);
+    CrearTablaDataDe4(usuarioEscritor(), 'tienda', 'NombreDeProducto', 'Precio', 'Existencias', 'Caducidad', 'Papas', 1, '10', 'Junio/');
+    CrearTablaDataDe3(usuarioEscritor(), 'venta', 'NombreDeProducto', 'CantidadDeProductos', 'Total', 'JUAN', 10, 2);
+    CrearTablaDataDe5(usuarioEscritor(), 'inventario', 'NombreDeProducto', 'ExistenciasIniciales', 'Entradas', 'Salidas', 'Stock', 'PAPAS', 100, 10, 20, 90);
+    CrearTablaDataDe3(usuarioEscritor(), 'empleados', 'Nombre', 'Apellido', 'Puesto', 'JUAN', 'PERES', 'Conductor');
+    CrearTablaDataDe5(usuarioEscritor(), 'creditos', 'Nombre', 'Apellido', 'FechaDeCompra', 'FechaDePago', 'TotalDeCompra', 'MARCO', 'Rodriguez', 'Mayo/', 'Julio/', 32);
 
-    CrearTablaDataDe4($conn, 'estudiantes', 'nombre', 'apellido_P', 'apellido_M', 'matricula', 'MARCOS', 'LOPEZ', 'JUAREZ', '10');
+    CrearTablaDataDe4(usuarioEscritor(), 'estudiantes', 'nombre', 'apellido_P', 'apellido_M', 'matricula', 'MARCOS', 'LOPEZ', 'JUAREZ', '10');
 
     
     for ($i = 0; $i < 10; $i++) {
@@ -83,7 +83,7 @@ if ($conn->connect_error) {
         $sql3 = "INSERT INTO horarios(Horario_Inicio,Horario_Fin,Dia,Nombre_materia,ID_salon) VALUES ('11:00:00','12:00:00','Lunes','Programacion','$roomID');";
 
 
-        if ($conn->query($sql3) === FALSE) {
+        if (usuarioEscritor()->query($sql3) === FALSE) {
             echo "FAILED " . $i;
         } else {
             echo 'Added ' . $i;
@@ -91,5 +91,5 @@ if ($conn->connect_error) {
     }
 }
 
-$conn->close();
+usuarioEscritor()->close();
 ?>

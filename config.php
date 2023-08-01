@@ -31,20 +31,35 @@ function leerENV($path)
 
 }
 
-$datosDeENV = leerENV(__DIR__ . '/.env');
+function usuarioLector()
+{
+    $datosDeENV = leerENV(__DIR__ . '/.env');
 
-#4 Variables Indispensables
-$nombreserver = "localhost";
+    #4 Variables Indispensables
+    $nombreserver = "localhost";
 
-$usuariobdLectura = $datosDeENV['DB_USERLECTURA'];
-$passLectura = $datosDeENV['DB_PASSLECTURA'];
+    $usuariobdLectura = $datosDeENV['DB_USERLECTURA'];
+    $passLectura = $datosDeENV['DB_PASSLECTURA'];
 
-$usuariobdEscritura = $datosDeENV['DB_USERESCRITURA'];
-$passEscritura = $datosDeENV['DB_PASSESCRITURA'];
+    $nombredb = "clase3a";
 
-$nombredb = "clase3a";
+    $conn = new mysqli($nombreserver, $usuariobdLectura, $passLectura, $nombredb);
 
-$connLectura = new mysqli($nombreserver, $usuariobdLectura, $passLectura, $nombredb);
-$conn = new mysqli($nombreserver, $usuariobdEscritura, $passEscritura, $nombredb);
+    return $conn;
 
+}
+function usuarioEscritor()
+{
+    $datosDeENV = leerENV(__DIR__ . '/.env');
+
+    #4 Variables Indispensables
+    $nombreserver = "localhost";
+
+    $usuariobdEscritura = $datosDeENV['DB_USERESCRITURA'];
+    $passEscritura = $datosDeENV['DB_PASSESCRITURA'];
+
+    $nombredb = "clase3a";
+    $conn = new mysqli($nombreserver, $usuariobdEscritura, $passEscritura, $nombredb);
+    return $conn; 
+}
 ?>
