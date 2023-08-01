@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     if ($conn->query($sqlcarreras) === FALSE) {
         echo "ERROR EN INSERT DATA A CARRERAS";
     }
-    $sqledificios = "INSERT INTOs edificios(Nombre,Posicion_z,Posicion_x,Descripcion) VALUES ('Edificio A','10.1','5.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio B','20.1','25.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio C','30.1','35.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio D','40.1','45.1','Dentro de este edificio puedes encontrar multiples departamentos');";
+    $sqledificios = "INSERT INTO edificios(Nombre,Posicion_z,Posicion_x,Descripcion) VALUES ('Edificio A','10.1','5.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio B','20.1','25.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio C','30.1','35.1','Dentro de este edificio puedes encontrar multiples departamentos'),('Edificio D','40.1','45.1','Dentro de este edificio puedes encontrar multiples departamentos');";
     if ($conn->query($sqledificios) === FALSE) {
         echo "ERROR EN INSERT DATA A EDIFICIOS";
     }

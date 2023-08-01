@@ -36,12 +36,14 @@ $datosDeENV = leerENV(__DIR__ . '/.env');
 #4 Variables Indispensables
 $nombreserver = "localhost";
 
-
-$usuariobdEscritura = $datosDeENV['DB_USERESCRITURA'];
-$passEscritura = $datosDeENV['DB_PASSESCRITURA'];
+$usuariobdLectura = $datosDeENV['DB_USERLECTURA'];
+$passLectura = $datosDeENV['DB_PASSLECTURA'];
 
 $nombredb = "clase3a";
 
-$conn = new mysqli($nombreserver, $usuariobdEscritura, $passEscritura, $nombredb);
+$connLectura = new mysqli($nombreserver, $usuariobdLectura, $passLectura, $nombredb);
+
 
 ?>
+
+

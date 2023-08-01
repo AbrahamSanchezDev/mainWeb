@@ -1,6 +1,6 @@
 <?php
 #Ejecutarlo Unicamente en el navegador
-if (php_sapi_name() !== 'apache2handler') {
+if (php_sapi_name() !== 'cli') {
     die("no se puede abrir desde la consola");
 }
 function CrearTablaDataDe2($conn, $tableName, $varname1, $varname2, $var1, $var2)
