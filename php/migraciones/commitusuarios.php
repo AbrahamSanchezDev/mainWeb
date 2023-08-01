@@ -1,4 +1,4 @@
-#commitusuarios
+
 <?php
 #commit -> enviamos a la base de datos , cambios.
 #rollback -> dehacer los cambios del commit.
@@ -7,12 +7,12 @@
 if(php_sapi_name() !== 'cli'){
     die("solo se puede abrir desde la consola");
 }
-function usuarioscommit()
+function usuariosTestcommit()
 {
     #va a hacer tablas
     #PHP Data Object
     try {
-        $pdo = new PDO("mysql:host=localhost;dbname=class3a","root","");
+        $pdo = new PDO("mysql:host=localhost;dbname=clase3a","root","");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $pdo->beginTransaction();
@@ -32,7 +32,7 @@ function usuarioscommit()
     }  
 
 }
-function usuariorollback()
+function usuariosTestrollback()
 {
     #deshaser los cambios de commit
     #PHP Data Object

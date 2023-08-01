@@ -1,11 +1,10 @@
-#commitusuarios
 <?php
 #commit -> enviamos a la base de datos , cambios.
 #rollback -> dehacer los cambios del commit.
 #commitusuarios -> archivo
 #usuariorollback -> function
 
-include '../commitbase.php';
+include_once __DIR__ .'../../commitbase.php';
 function estudiantescommit()
 {
     #va a hacer tablas
