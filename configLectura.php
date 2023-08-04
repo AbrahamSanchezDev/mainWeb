@@ -43,6 +43,4 @@ $passLectura = $datosDeENV['DB_PASSLECTURA'];
 $nombredb = "clase3a";
 
 $connLectura = new mysqli($nombreserver, $usuariobdLectura, $passLectura, $nombredb);
-
-
 ?>
